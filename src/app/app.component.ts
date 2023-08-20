@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isMenuOpen = false;
+
   title = 'my-app-angular';
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen
+  }
+
+  onLogoutClick(){}
 }

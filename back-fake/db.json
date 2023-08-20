@@ -1,9 +1,39 @@
 {
-    "users": [
-        {
-            "name": "José Espinheira",
-            "login": "joseespinheira",
-            "password": "1234"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "José Espinheira",
+      "login": "joseespinheira1",
+      "password": "1234",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "name": "José Espinheira",
+      "login": "joseespinheira2",
+      "password": "1234",
+      "role": 2
+    },
+    {
+      "id": 3,
+      "name": "José Espinheira",
+      "login": "joseespinheira3",
+      "password": "1234",
+      "role": 3
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "description": "super"
+    },
+    {
+      "id": 2,
+      "description": "adm"
+    },
+    {
+      "id": 3,
+      "description": "pais"
+    }
+  ]
 }

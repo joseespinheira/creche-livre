@@ -1,7 +1,0 @@
-{
-  "name": "creche-livre",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

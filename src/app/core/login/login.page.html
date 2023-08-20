@@ -1,0 +1,11 @@
+<div class="form-container">
+  <form (ngSubmit)="submitForm()" class="form-field">
+    <label for="username">Nome</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username" />
+
+    <label for="password">Sobrenome</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" />
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
