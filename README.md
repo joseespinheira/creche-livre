@@ -1,10 +1,18 @@
+# Creche Livre
+
+Projeto aplicado do XP educação para desenvolvimento de um MPV de um sistema de gerenciamento de creche.
+
 # MyAppAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run dev` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
+
+## Apagar depois TODO
 
 ## Code scaffolding
 

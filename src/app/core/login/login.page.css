@@ -1,12 +1,25 @@
-.form-container {
+
+
+  .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 89vh;
+    min-height: 100vh; /* Garante que a div ocupe a altura total da tela */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Governador_entrega_Creche_Escola_em_S%C3%A3o_Jo%C3%A3o_da_Boa_Vista._%2837424554856%29.jpg'); /* Ajuste o caminho para a imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem horizontalmente */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    padding: 20px;
   }
-
+  
   .form-field {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; 
+    max-width: 240px; 
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -20,7 +33,8 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: -webkit-fill-available;
+    margin-bottom: 15px;
   }
 
   button {

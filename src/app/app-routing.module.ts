@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomePage, canActivate: [AuthGuard] },
   { path: 'matricula', component: MatriculaComponent, canActivate: [AuthGuard] },
 
-  { path: '**', redirectTo: '/login' } // Rota para qualquer outra URL inválida
+  { path: '**', redirectTo: '/login' } 
 
 ];
 
