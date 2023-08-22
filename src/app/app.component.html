@@ -1,29 +1,52 @@
-<p style="overflow: hidden;" *ngIf="isLogin">
+<mat-drawer-container hasBackdrop="true" style="height: 100vh;">
+  <mat-drawer #drawer mode="over" class="menu-drawer">
+      <h2>Menu</h2>
+      <hr>
+      <h3 routerLink="/home">- Inicio </h3>
+  </mat-drawer>
 
-  <mat-toolbar>
+  <p style="overflow: hidden" *ngIf="isLogin">
+    <mat-toolbar>
 
-    <button
+      
+      <button
       mat-icon-button
       class="example-icon"
       aria-label="Example icon-button with menu icon"
-    >
+      (click)="drawer.toggle()"
+      >
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="titulo-menu">Inicio</span>
 
+    <span class="titulo-menu" routerLink="/home">Inicio</span>
+    
     <span class="example-spacer"></span>
-
+    
     <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-      (click)="logout()"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    (click)="logout()"
     >
-      <mat-icon>logout</mat-icon>
+    <mat-icon>logout</mat-icon>
     </button>
-
   </mat-toolbar>
 
+  <mat-sidenav-container>
+    <mat-sidenav #menu mode="side">
+      <!-- Conteúdo do menu lateral aqui -->
+      <ul>
+        <li><a routerLink="/home">Página Inicial</a></li>
+        <!-- Adicione mais links de navegação aqui -->
+      </ul>
+    </mat-sidenav>
+
+    <!-- Conteúdo da página principal aqui -->
+    <mat-sidenav-content>
+      <!-- ... -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </p>
 
 <router-outlet></router-outlet>
+</mat-drawer-container>

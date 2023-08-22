@@ -9,6 +9,11 @@ import { AuthGuard } from './servicos/auth.guard';
 export class AppComponent implements DoCheck {
   isLogin: boolean = false;
 
+  events: string[] = [];
+  opened: boolean = true;
+  shouldRun = true;
+
+
   teste = "";
   title = 'my-app-angular';
 

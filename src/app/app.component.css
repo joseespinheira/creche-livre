@@ -11,3 +11,16 @@
   .titulo-menu{
     padding-left: 15px;
   }
+
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-drawer{
+    background-color: rgb(87 210 168);
+    width: 80%;
+    padding-left: 15px;
+  }

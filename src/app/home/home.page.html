@@ -1,7 +1,8 @@
 <h2>Bem vindo, perfil: {{texto}}</h2>
 <div class="container">
-    <div class="menu" *ngIf="role == 2">Função Adm</div>
-    <div class="menu" *ngIf="role == 2">Função Adm</div>
+    <div class="menu" routerLink="/matricula" *ngIf="role == 2">Matricula</div>
+
+    <div class="menu" *ngIf="role == 2">Registro Pagamento</div>
     <div class="menu" *ngIf="role == 2">Função Adm</div>
     <div class="menu" *ngIf="role == 3">Função Pais</div>
     <div class="menu" *ngIf="role == 3">Função Pais</div>
