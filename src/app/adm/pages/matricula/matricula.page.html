@@ -1,0 +1,138 @@
+<h2>Matrícula</h2>
+
+<div class="accordion" id="accordionFlushExample">
+  <form>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne"
+          aria-expanded="false"
+          aria-controls="flush-collapseOne"
+        >
+          Dados da Criança
+        </button>
+      </h2>
+      <div
+        id="flush-collapseOne"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionFlushExample"
+      >
+        <div class="m-3">
+          <div class="mb-3">
+            <label for="nome_crianca" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome_crianca"
+              name="nome_crianca"
+              [(ngModel)]="nome_crianca"
+              placeholder="Nome completo"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="data_nascimento" class="form-label">Data nascimento</label>
+            <input
+              type="date"
+              class="form-control"
+              id="data_nascimento"
+              name="data_nascimento"
+              [(ngModel)]="data_nascimento"
+              placeholder="Nome completo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo"
+          aria-expanded="true"
+          aria-controls="flush-collapseTwo"
+        >
+          Dados dos Pais
+        </button>
+      </h2>
+      <div
+        id="flush-collapseTwo"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionFlushExample"
+      >
+        <div class="m-3">
+          <div class="mb-3">
+            <label for="nome_mae" class="form-label">Nome Mãe</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome_mae"
+              name="nome_mae"
+              [(ngModel)]="nome_mae"
+              placeholder="Nome completo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#flush-collapse-matricula"
+          aria-expanded="true"
+          aria-controls="flush-collapse-matricula"
+        >
+          Dados da matricula
+        </button>
+      </h2>
+      <div
+        id="flush-collapse-matricula"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionFlushExample"
+      >
+        <div class="m-3">
+          <div class="mb-3">
+            <label for="plano" class="form-label">Plano</label>
+            <select [(ngModel)]="plano" name="plano" id="plano" class="form-control select">
+              <option [value]="0">Selecione...</option>
+              <option *ngFor="let opcao of planosDisponiveis" [value]="opcao.id">{{ opcao.description +' - '+ (opcao.valor|currency:'BRL':true:'1.2-2') }}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="data_pagamento" class="form-label">Data do pagamento</label>
+            <input
+              type="number"
+              class="form-control"
+              id="data_pagamento"
+              name="data_pagamento"
+              max="31"
+              min="1"
+              [(ngModel)]="data_pagamento"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="fixed-bottom bg-light p-3">
+      <div class="container">
+        <div class="d-flex justify-content-around">
+          <div class="col-md-6">
+            <!-- Botão de Limpar -->
+            <button type="button" class="btn btn-secondary" (click)="clearForm()">Limpar</button>
+          </div>
+          <div class="col-md-6 text-right">
+            <!-- Botão de Salvar -->
+            <button type="button" class="btn btn-primary" (click)="submitForm()">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </form>
+</div>

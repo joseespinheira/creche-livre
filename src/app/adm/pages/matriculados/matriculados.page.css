@@ -1,0 +1,21 @@
+td{
+    margin: 5px;
+    padding: 5px;
+}
+
+thead th{
+    border: solid 2px #000;
+    text-align: center;
+}
+
+table{
+    width: -webkit-fill-available;
+}
+tbody tr td:nth-child(1),
+tbody tr td:nth-child(2){
+    text-align: center;
+}
+
+tbody tr td:last-child{
+    text-align: center;
+}

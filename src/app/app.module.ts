@@ -8,17 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { HomePage } from './home/home.page';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './shared/confirm-dialog.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table';
 @NgModule({
-  declarations: [AppComponent, HomePage],
+  declarations: [AppComponent, HomePage, ConfirmDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,10 +29,13 @@ import { HomePage } from './home/home.page';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule, 
+    MatTableModule,
+    MatDialogModule,
     MatMenuModule,
-    MatSidenavModule, MatFormFieldModule, MatSelectModule,
-    CoreModule, 
-    CommonModule,
+    MatSidenavModule,MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    CoreModule,
     BrowserAnimationsModule,
   ],
   providers: [],

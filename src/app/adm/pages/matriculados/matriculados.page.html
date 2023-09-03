@@ -1,0 +1,53 @@
+<h2 class="m-4">Lista de Matriculados</h2>
+
+<table class="m-3">
+  <thead>
+    <tr>
+      <th>Ações</th>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Situação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of listaMatriculados;">
+      <td>
+        <!-- Ícone para acionar o menu -->
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <!-- Dropdown Menu -->
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="editarAluno(aluno.id)">
+            Matricula
+          </button>
+          <button mat-menu-item (click)="editarAluno(aluno.id)">
+            Responsaveis
+          </button>
+          <button mat-menu-item (click)="editarAluno(aluno.id)">
+            Acordo
+          </button>
+          <button mat-menu-item (click)="registraPagamento(aluno.id)">
+            Registrar pagamento
+          </button>
+          <button mat-menu-item (click)="editarAluno(aluno.id)">Editar</button>
+          <button mat-menu-item (click)="excluirAluno(aluno.id)">
+            Excluir
+          </button>
+        </mat-menu>
+      </td>
+      <td>{{aluno.id}}</td>
+      <td>{{aluno.nome_crianca}}</td>
+      <td>
+        {{
+          
+          aluno.pagamento
+        }}
+        <span class="badge text-bg-success">Pago</span>
+        <span class="badge text-bg-danger">Pendente</span>
+        <span class="badge text-bg-warning">Parcial</span>
+        <span class="badge text-bg-info">Acordo</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

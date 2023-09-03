@@ -1,12 +1,12 @@
 {
-  "users": [
+  "user": [
     {
       "id": 1,
       "name": "José Espinheira",
       "login": "joseespinheira1",
       "password": "1234",
       "role": 1,
-      "creche":1
+      "creche": 1
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "login": "joseespinheira2",
       "password": "1234",
       "role": 2,
-      "creche":1
+      "creche": 1
     },
     {
       "id": 3,
@@ -22,10 +22,10 @@
       "login": "joseespinheira3",
       "password": "1234",
       "role": 3,
-      "creche":1
+      "creche": 1
     }
   ],
-  "roles": [
+  "role": [
     {
       "id": 1,
       "description": "super"
@@ -39,10 +39,155 @@
       "description": "pais"
     }
   ],
-  "creche":[
+  "creche": [
     {
       "id": 1,
       "description": "creche emanuel"
+    }
+  ],
+  "tipo_responsavel": [
+    {
+      "id": 1,
+      "description": "Pai"
+    },
+    {
+      "id": 1,
+      "description": "Mãe"
+    },
+    {
+      "id": 1,
+      "description": "Avó/Avô"
+    },
+    {
+      "id": 1,
+      "description": "Tia/Tio"
+    }
+  ],
+  "aluno": [
+    {
+      "id": 1,
+      "nome_crianca": "Maria Antonieta da silva chavier",
+      "data_nascimento": "20/01/2000"
+    },
+    {
+      "data_nascimento": "1989-11-20",
+      "nome_crianca": "Jose Teste",
+      "id": 2
+    }
+  ],
+  "responsavel": [
+    {
+      "id": 1,
+      "nome": "João",
+      "alunoId": 1,
+      "id_tipo_responsavel": 1,
+      "responsavel_principal": true
+    },
+    {
+      "nome": "Maura",
+      "alunoId": 2,
+      "id_tipo_responsavel": 1,
+      "responsavel_principal": true,
+      "id": 2
+    }
+  ],
+  "plano": [
+    {
+      "id": 1,
+      "description": "Plano mensal",
+      "valor": 150,
+      "juros": 1
+    },
+    {
+      "id": 1,
+      "description": "Plano Anual",
+      "valor": 1600,
+      "juros": 1
+    }
+  ],
+  "matricula": [
+    {
+      "id": 1,
+      "alunoId": 1,
+      "data_pagamento": "8",
+      "data_matricula": "2023-05-03T01:14:10.027Z",
+      "planoId": 1,
+      "crecheId": 1
+    },
+    {
+      "alunoId": 2,
+      "data_pagamento": 10,
+      "data_matricula": "2023-09-03T01:14:10.027Z",
+      "planoId": "1",
+      "id": 2,
+      "crecheId": 1
+    }
+  ],
+  "situacao_pagamento": [
+    {
+      "id": 1,
+      "description": "Pendente"
+    },
+    {
+      "id": 2,
+      "description": "Pago"
+    },
+    {
+      "id": 3,
+      "description": "Parcial"
+    },
+    {
+      "id": 4,
+      "description": "Acordo"
+    }
+  ],
+  "pagamento": [
+    {
+      "id": 1,
+      "alunoId": 1,
+      "id_creche": 1,
+      "data_pagamento": "2023-06-08",
+      "valor_pagamento": 150,
+      "situacao": 2,
+      "observacao": "Pago"
+    },
+    {
+      "id": 3,
+      "alunoId": 1,
+      "id_creche": 1,
+      "data_pagamento": "2023-07-08",
+      "valor_pagamento": 150,
+      "situacao": 4,
+      "observacao": "Acordo"
+    },
+    {
+      "id": 4,
+      "alunoId": 1,
+      "id_creche": 1,
+      "data_pagamento": "2023-08-23",
+      "valor_pagamento": 265,
+      "situacao": 4,
+      "observacao": "Pago com Acordo"
+    },
+    {
+      "alunoId": 1,
+      "id_creche": 1,
+      "data_pagamento": "2023-09-02",
+      "valor_pagamento": 185,
+      "situacao": 2,
+      "observacao": "Pagou com a diferença e os juros vão ser esquecidos",
+      "id": 2
+    }
+  ],
+  "acordo": [
+    {
+      "id": 1,
+      "alunoId": 1,
+      "valor": 265,
+      "parcelas": [
+        "07"
+      ],
+      "observacao": "Parcela do mês julho e parte do mês de agosto"
     }
   ]
 }

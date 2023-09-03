@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Formulário de Pagamento</h2>
+  <h3>Aluno: {{data.aluno.nome_crianca}}</h3>
+  <form>
+    <div class="form-group mb-3">
+      <label for="dataPagamento">Data de Pagamento:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dataPagamento"
+        [(ngModel)]="dataPagamento"
+        name="dataPagamento"
+        required
+      />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="valorPago">Valor Pago (BRL):</label>
+      <input
+        type="text"
+        class="form-control"
+        id="valorPago"
+        [(ngModel)]="valorPago"
+        name="valorPago" format="0.2-2"
+        pattern="^\d+(\.\d{1,2})?$"
+        required
+        [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" currencyMask
+      />
+      <small class="form-text text-muted">Use o formato 9999.99</small>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="observacao">Observação:</label>
+      <textarea
+        class="form-control"
+        id="observacao"
+        [(ngModel)]="observacao"
+        name="observacao"
+        maxlength="400"
+      ></textarea>
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Enviar</button>
+        <button type="button" class="btn btn-danger m-2" (click)="this.dialogRef.close();">Fechar</button>
+    </div>
+</form>
+</div>
