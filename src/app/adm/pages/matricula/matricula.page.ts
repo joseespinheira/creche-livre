@@ -39,6 +39,15 @@ export class MatriculaComponent implements OnInit {
       nome_crianca: this.nome_crianca,
     };
 
+    if(!dadosAluno.data_nascimento || !dadosAluno.nome_crianca)
+    this.dialog.open(ConfirmDialogComponent, {
+      width: '300px', // Largura do diálogo
+      data: {
+        titulo: 'Atenção',
+        message: 'Preencha os dados!',
+      },
+    });
+    if(dadosAluno.data_nascimento || dadosAluno.nome_crianca)
     // TODO separar a entidade do aluno da entidade do pai/mae
     this.matriculaService.salvarDadosAluno(dadosAluno).subscribe({
       next: (response) => {

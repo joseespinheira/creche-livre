@@ -1,0 +1,91 @@
+<h2 class="m-4">Movimentações Gerais:</h2>
+
+<div
+  class="m-auto p-1"
+  style="width: 96vw; border-radius: 10px; border: 5px solid #cccccc80"
+>
+  <form (ngSubmit)="filtrar()">
+    <div class="m-3">
+      <label for="filtroAluno">Nome aluno:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="filtroAluno"
+        name="filtroAluno"
+        [(ngModel)]="filtroAluno"
+      />
+    </div>
+
+    <div class="m-3">
+      <label for="filtroSituacao">Situação:</label>
+      <select
+        class="form-control select"
+        id="filtroSituacao"
+        name="filtroSituacao"
+        [(ngModel)]="filtroSituacao"
+      >
+        <option value="">Todos</option>
+        <option *ngFor="let opcao of situacoes" [value]="opcao.chave">
+          {{ opcao.valor }}
+        </option>
+      </select>
+    </div>
+
+    <!-- <div class="row m-3">
+    <div class="col-6">
+      <label for="filtroPeriodoInicio">Data Início:</label>
+      <input
+        class="form-control"
+        type="date"
+        id="filtroPeriodoInicio"
+        name="filtroPeriodoInicio"
+        [(ngModel)]="filtroPeriodoInicio"
+      />
+    </div>
+
+    <div class="col-6">
+      <label for="filtroPeriodoFim">Data Fim:</label>
+      <input
+        class="form-control"
+        type="date"
+        id="filtroPeriodoFim"
+        name="filtroPeriodoFim"
+        [(ngModel)]="filtroPeriodoFim"
+      />
+    </div>
+  </div> -->
+
+    <div class="m-3">
+      <button class="btn btn-primary">Aplicar Filtros</button>
+      <button class="btn btn-warning m-2">Limpar</button>
+    </div>
+  </form>
+</div>
+
+<div
+  class="m-auto p-1"
+  style="width: 96vw; border-radius: 10px; border: 5px solid #cccccc80"
+>
+  <div class="m-3">
+    <table class="w-100">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Aluno</th>
+          <th>Data Pagamentos</th>
+          <th>Valor</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movimento of movimentacoes;">
+          <td>{{movimento.id}}</td>
+          <td>{{getNomeCrianca(movimento.alunoId)}}</td>
+          <td>{{movimento.data_pagamento | date : 'dd/MM/yyyy'}}</td>
+          <td>{{movimento.valor_pagamento}}</td>
+          <td>{{movimento.situacaoId | descricaoSituacaoPagamento}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

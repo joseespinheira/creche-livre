@@ -71,8 +71,23 @@
     },
     {
       "data_nascimento": "1989-11-20",
-      "nome_crianca": "Jose Teste",
+      "nome_crianca": "Juliana Rocha dos santos",
       "id": 2
+    },
+    {
+      "data_nascimento": "1989-11-20",
+      "nome_crianca": "Jose da silva chavier",
+      "id": 3
+    },
+    {
+      "data_nascimento": "1989-11-20",
+      "nome_crianca": "Lucas Moureira",
+      "id": 4
+    },
+    {
+      "data_nascimento": "",
+      "nome_crianca": "",
+      "id": 5
     }
   ],
   "responsavel": [
@@ -89,6 +104,13 @@
       "id_tipo_responsavel": 1,
       "responsavel_principal": true,
       "id": 2
+    },
+    {
+      "nome": "",
+      "alunoId": 5,
+      "id_tipo_responsavel": 1,
+      "responsavel_principal": true,
+      "id": 3
     }
   ],
   "plano": [
@@ -121,9 +143,17 @@
       "planoId": "1",
       "id": 2,
       "crecheId": 1
+    },
+    {
+      "alunoId": 5,
+      "data_pagamento": 1,
+      "data_matricula": "2023-09-17T00:18:44.195Z",
+      "planoId": 0,
+      "crecheId": 1,
+      "id": 3
     }
   ],
-  "situacao_pagamento": [
+  "situacao": [
     {
       "id": 1,
       "description": "Pendente"
@@ -148,8 +178,17 @@
       "id_creche": 1,
       "data_pagamento": "2023-06-08",
       "valor_pagamento": 150,
-      "situacao": 2,
+      "situacaoId": 2,
       "observacao": "Pago"
+    },
+    {
+      "id": 2,
+      "alunoId": 1,
+      "id_creche": 1,
+      "data_pagamento": "2023-09-02",
+      "valor_pagamento": 185,
+      "situacaoId": 2,
+      "observacao": "Pagou com a diferença e os juros vão ser esquecidos"
     },
     {
       "id": 3,
@@ -157,7 +196,7 @@
       "id_creche": 1,
       "data_pagamento": "2023-07-08",
       "valor_pagamento": 150,
-      "situacao": 4,
+      "situacaoId": 4,
       "observacao": "Acordo"
     },
     {
@@ -166,17 +205,44 @@
       "id_creche": 1,
       "data_pagamento": "2023-08-23",
       "valor_pagamento": 265,
-      "situacao": 4,
+      "situacaoId": 4,
       "observacao": "Pago com Acordo"
     },
     {
-      "alunoId": 1,
+      "id": 5,
+      "alunoId": 3,
       "id_creche": 1,
       "data_pagamento": "2023-09-02",
-      "valor_pagamento": 185,
-      "situacao": 2,
-      "observacao": "Pagou com a diferença e os juros vão ser esquecidos",
-      "id": 2
+      "valor_pagamento": 183,
+      "situacaoId": 2,
+      "observacao": "Pago"
+    },
+    {
+      "id": 6,
+      "alunoId": 4,
+      "id_creche": 1,
+      "data_pagamento": "2023-09-02",
+      "valor_pagamento": 189,
+      "situacaoId": 2,
+      "observacao": "Pago"
+    },
+    {
+      "alunoId": 2,
+      "id_creche": 1,
+      "data_pagamento": "2023-09-16",
+      "valor_pagamento": 200,
+      "situacaoId": 2,
+      "observacao": "Pago",
+      "id": 7
+    },
+    {
+      "alunoId": 2,
+      "id_creche": 1,
+      "data_pagamento": "2023-08-16",
+      "valor_pagamento": 250,
+      "situacaoId": 2,
+      "observacao": "Pago agora",
+      "id": 8
     }
   ],
   "acordo": [

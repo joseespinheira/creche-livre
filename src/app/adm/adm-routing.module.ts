@@ -3,27 +3,33 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatriculaComponent } from './pages/matricula/matricula.page';
 import { AuthGuard } from '../servicos/auth.guard';
 import { MatriculadosComponent } from './pages/matriculados/matriculados.page';
+import { HistoricoPagamentoComponent } from './pages/historicoPagamentos/historico-pagamentos';
 
 const routes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: MatriculaComponent,
-    canActivate: [AuthGuard] 
+    canActivate: [AuthGuard],
   },
-  { 
-    path: 'listar', 
+  {
+    path: 'listar',
     component: MatriculadosComponent,
-    canActivate: [AuthGuard] 
-  },  
-  { 
-    path: 'pagamento', 
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'pagamento',
     component: MatriculadosComponent,
-    canActivate: [AuthGuard] 
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'historico-pagamento',
+    component: HistoricoPagamentoComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdmRoutingModule { }
+export class AdmRoutingModule {}

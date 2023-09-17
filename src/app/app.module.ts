@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './shared/confirm-dialog.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatTableDataSource} from '@angular/material/table';
+import { DescricaoSituacaoPagamentoPipe } from './shared/situacaoEnum';
 @NgModule({
   declarations: [AppComponent, HomePage, ConfirmDialogComponent],
   imports: [
@@ -36,7 +37,7 @@ import {MatTableDataSource} from '@angular/material/table';
     MatFormFieldModule,
     MatSelectModule,
     CoreModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

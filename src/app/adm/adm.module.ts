@@ -16,13 +16,17 @@ import { RegistroPagamentoComponent } from './pages/registro-pagamento/registro-
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { RegistraPagamentoComponent } from './components/registra-pagamento/registra-pagamento';
-import { CurrencyMaskModule } from "ng2-currency-mask";
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { HistoricoPagamentoComponent } from './pages/historicoPagamentos/historico-pagamentos';
+import { DescricaoSituacaoPagamentoPipe } from '../shared/situacaoEnum';
 
 @NgModule({
   declarations: [
     MatriculaComponent,
     MatriculadosComponent,
-    RegistroPagamentoComponent,RegistraPagamentoComponent
+    RegistroPagamentoComponent,
+    RegistraPagamentoComponent,
+    HistoricoPagamentoComponent,DescricaoSituacaoPagamentoPipe
   ],
   imports: [
     FormsModule,
@@ -36,7 +40,7 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     MatMenuModule,
     CommonModule,
     MatExpansionModule,
-    AdmRoutingModule,
+    AdmRoutingModule
   ],
   providers: [],
   bootstrap: [],
